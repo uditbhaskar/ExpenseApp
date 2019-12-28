@@ -6,45 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <EditText
-        android:id="@+id/day"
+<TextView
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="wrap_content"
+    app:layout_constraintBottom_toTopOf="@id/weekSpinner"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:textStyle="bold"
+    android:text="Select day first"
+    />
+    <Spinner android:id="@+id/weekSpinner"
+        android:paddingLeft="8dp"
+        android:popupBackground="@android:color/white"
+        android:scrollbars="none"
+        android:spinnerMode="dropdown"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="150dp"
+        android:layout_marginEnd="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="35dp"
-        android:layout_marginStart="35dp"
-        android:hint="Enter day.">
-    </EditText>
+        app:layout_constraintTop_toTopOf="parent">
+
+    </Spinner>
 
     <EditText
-        android:id="@+id/money"
+        android:id="@+id/et_money"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="35dp"
         android:hint="Enter amount spend."
-        app:layout_constraintEnd_toEndOf="@id/day"
+        app:layout_constraintEnd_toEndOf="@id/weekSpinner"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/addMoneyDay"
+        android:id="@+id/btn_addMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="43dp"
         android:layout_marginEnd="160dp"
-        android:onClick="addExpense"
         android:text="Add Expenses"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/money" />
-
+        app:layout_constraintTop_toBottomOf="@+id/et_money" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
